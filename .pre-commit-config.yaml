@@ -1,0 +1,15 @@
+repos:
+  # Formatação e Linting do Backend (Python)
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.3.0
+    hooks:
+      - id: ruff
+        args: [ --fix ]
+      - id: ruff-format
+
+  # Formatação e Linting do Frontend (JS/TS)
+  - repo: https://github.com/biomejs/pre-commit
+    rev: v0.1.0
+    hooks:
+      - id: biome-check
+        additional_dependencies: ["@biomejs/biome@1.8.3"]
